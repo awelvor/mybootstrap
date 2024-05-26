@@ -4,7 +4,7 @@ collections:
 
 defaults:
   - scope:
-      path: ""
+      path: "/bootstrap/"
       type: "authors"
     values:
       layout: "author"
