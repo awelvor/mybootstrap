@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>make_url</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+  </head>
+  <body>
+  <div class="container">
+    <h1>make_url</h1>
+    <p>symfony new symfony --version="6.4.*" --webapp</p>
+    <p>symfony new symfony --version="7.0.*" --webapp</p>
+    <p>echo 'DATABASE_URL="mysql://philippe:mowgli@127.0.0.1:3306/mydb?serverVersion=8.0.32&charset=utf8mb4"' >> .env</p>
+    <script>
+    const tab =   [
+    {url:'http://localhost:8000/'},
+    {url:'http://localhost:8000/product'},
+    {url:'http://localhost:8000/product/1'},
+    {url:'http://localhost:8000/task'},
+    {url:'http://localhost:8000/euros'},
+    {url:'http://localhost:8000/euros/budgets'},
+    {url:'http://localhost:8000/euros/comptes/0/ccsg'},
+    {url:'http://localhost:8000/euros/new'},
+    {url:'http://localhost:8000/euros/1'},
+    {url:'http://localhost:8000/euros/1/edit'},
+    
+    ]
+    html = "";
+    tab.forEach(function(el){
+    html += '<a href="'+el.url+'" target=_blank>'+el.url+'</a><br>';
+    });
+    html +="<br>";
+    document.write(html);
+    
+    
+    </script>
+    
+    <h5>pour créer une entité</h5>
+    <p>php bin/console cache:clear
+    <p>php bin/console   make:entity<br>
+    php bin/console   make:migration<br>
+    php bin/console   doctrine:migrations:migrate<br>
+    php bin/console   make:crud 
+    
+    </p>
+    
+    <h5>pour modifier une entité</h5>
+    <p>php bin/console cache:clear
+    <p>php bin/console   make:entity<br>
+    php bin/console   make:migration<br>
+    php bin/console   doctrine:migrations:migrate<br>
+    php bin/console make:form    
+    </p>
+    
+    <table>
+    <tr><td> Symfony 6.4.2 (env: dev, debug: true)</td></tr>
+<tr><td> </td></tr>
+<tr><td> Usage:</td></tr>
+<tr><td>   command [options] [arguments]</td></tr>
+<tr><td> </td></tr>
+<tr><td> Options:</td></tr>
+<tr><td>   -h, --help         </td><td>Display help for the given command. When no command is given display help for the list command</td></tr>
+<tr><td>   -q, --quiet        </td><td>Do not output any message</td></tr>
+<tr><td>   -V, --version      </td><td>Display this application version</td></tr>
+<tr><td>       --ansi|--no-ansi</td></tr>Force (or disable --no-ansi) ANSI output</td></tr>
+<tr><td>   -n, --no-interaction</td></tr>Do not ask any interactive question</td></tr>
+<tr><td>   -e, --env=ENV      </td><td>The Environment name. [default: "dev"]</td></tr>
+<tr><td>       --no-debug     </td><td>Switch off debug mode.</td></tr>
+<tr><td>       --profile      </td><td>Enables profiling (requires debug).</td></tr>
+<tr><td>   -v|vv|vvv, --verbose</td></tr>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr>
+<tr><td> </td></tr>
+<tr><td> Available commands:</td></tr>
+<tr><td>php bin/console   about                                   </td><td>Display information about the current project</td></tr>
+<tr><td>php bin/console   completion                              </td><td>Dump the shell completion script</td></tr>
+<tr><td>php bin/console   help                                    </td><td>Display help for a command</td></tr>
+<tr><td>php bin/console   list                                    </td><td>List commands</td></tr>
+<tr><td>php bin/console  asset-map</td></tr>
+<tr><td>php bin/console   asset-map:compile                       </td><td>Compile all mapped assets and writes them to the final public output directory</td></tr>
+<tr><td>php bin/console  assets</td></tr>
+<tr><td>php bin/console   assets:install                          </td><td>Install bundle's web assets under a public directory</td></tr>
+<tr><td>php bin/console  cache</td></tr>
+<tr><td>php bin/console   cache:clear                             </td><td>Clear the cache</td></tr>
+<tr><td>php bin/console   cache:pool:clear                        </td><td>Clear cache pools</td></tr>
+<tr><td>php bin/console   cache:pool:delete                       </td><td>Delete an item from a cache pool</td></tr>
+<tr><td>php bin/console   cache:pool:invalidate-tags              </td><td>Invalidate cache tags for all or a specific pool</td></tr>
+<tr><td>php bin/console   cache:pool:list                         </td><td>List available cache pools</td></tr>
+<tr><td>php bin/console   cache:pool:prune                        </td><td>Prune cache pools</td></tr>
+<tr><td>php bin/console   cache:warmup                            </td><td>Warm up an empty cache</td></tr>
+<tr><td>php bin/console  config</td></tr>
+<tr><td>php bin/console   config:dump-reference                   </td><td>Dump the default configuration for an extension</td></tr>
+<tr><td>php bin/console  dbal</td></tr>
+<tr><td>php bin/console   dbal:run-sql                            </td><td>Executes arbitrary SQL directly from the command line.</td></tr>
+<tr><td>php bin/console  debug</td></tr>
+<tr><td>php bin/console   debug:asset-map                         </td><td>Output all mapped assets</td></tr>
+<tr><td>php bin/console   debug:autowiring                        </td><td>List classes/interfaces you can use for autowiring</td></tr>
+<tr><td>php bin/console   debug:config                            </td><td>Dump the current configuration for an extension</td></tr>
+<tr><td>php bin/console   debug:container                         </td><td>Display current services for an application</td></tr>
+<tr><td>php bin/console   debug:dotenv                            </td><td>List all dotenv files with variables and values</td></tr>
+<tr><td>php bin/console   debug:event-dispatcher                  </td><td>Display configured listeners for an application</td></tr>
+<tr><td>php bin/console   debug:firewall                          </td><td>Display information about your security firewall(s)</td></tr>
+<tr><td>php bin/console   debug:form                              </td><td>Display form type information</td></tr>
+<tr><td>php bin/console   debug:messenger                         </td><td>List messages you can dispatch using the message buses</td></tr>
+<tr><td>php bin/console   debug:router                            </td><td>Display current routes for an application</td></tr>
+<tr><td>php bin/console   debug:serializer                        </td><td>Display serialization information for classes</td></tr>
+<tr><td>php bin/console   debug:translation                       </td><td>Display translation messages information</td></tr>
+<tr><td>php bin/console   debug:twig                              </td><td>Show a list of twig functions, filters, globals and tests</td></tr>
+<tr><td>php bin/console   debug:validator                         </td><td>Display validation constraints for classes</td></tr>
+<tr><td>php bin/console  doctrine</td></tr>
+<tr><td>php bin/console   doctrine:cache:clear-collection-region  </td><td>Clear a second-level cache collection region</td></tr>
+<tr><td>php bin/console   doctrine:cache:clear-entity-region      </td><td>Clear a second-level cache entity region</td></tr>
+<tr><td>php bin/console   doctrine:cache:clear-metadata           </td><td>Clear all metadata cache of the various cache drivers</td></tr>
+<tr><td>php bin/console   doctrine:cache:clear-query              </td><td>Clear all query cache of the various cache drivers</td></tr>
+<tr><td>php bin/console   doctrine:cache:clear-query-region       </td><td>Clear a second-level cache query region</td></tr>
+<tr><td>php bin/console   doctrine:cache:clear-result             </td><td>Clear all result cache of the various cache drivers</td></tr>
+<tr><td>php bin/console   doctrine:database:create                </td><td>Creates the configured database</td></tr>
+<tr><td>php bin/console   doctrine:database:drop                  </td><td>Drops the configured database</td></tr>
+<tr><td>php bin/console   doctrine:ensure-production-settings     </td><td>Verify that Doctrine is properly configured for a production environment</td></tr>
+<tr><td>php bin/console   doctrine:mapping:convert                </td><td>[orm:convert:mapping] Convert mapping information between supported formats</td></tr>
+<tr><td>php bin/console   doctrine:mapping:import                 </td><td>Imports mapping information from an existing database</td></tr>
+<tr><td>php bin/console   doctrine:mapping:info                   </td><td>Show basic information about all mapped entities</td></tr>
+<tr><td>php bin/console   doctrine:migrations:current             </td><td>Outputs the current version</td></tr>
+<tr><td>php bin/console   doctrine:migrations:diff                </td><td>Generate a migration by comparing your current database to your mapping information.</td></tr>
+<tr><td>php bin/console   doctrine:migrations:dump-schema         </td><td>Dump the schema for your database to a migration.</td></tr>
+<tr><td>php bin/console   doctrine:migrations:execute             </td><td>Execute one or more migration versions up or down manually.</td></tr>
+<tr><td>php bin/console   doctrine:migrations:generate            </td><td>Generate a blank migration class.</td></tr>
+<tr><td>php bin/console   doctrine:migrations:latest              </td><td>Outputs the latest version</td></tr>
+<tr><td>php bin/console   doctrine:migrations:list                </td><td>Display a list of all available migrations and their status.</td></tr>
+<tr><td>php bin/console   doctrine:migrations:migrate             </td><td>Execute a migration to a specified version or the latest available version.</td></tr>
+<tr><td>php bin/console   doctrine:migrations:rollup              </td><td>Rollup migrations by deleting all tracked versions and insert the one version that exists.</td></tr>
+<tr><td>php bin/console   doctrine:migrations:status              </td><td>View the status of a set of migrations.</td></tr>
+<tr><td>php bin/console   doctrine:migrations:sync-metadata-storage</td></tr>Ensures that the metadata storage is at the latest version.</td></tr>
+<tr><td>php bin/console   doctrine:migrations:up-to-date          </td><td>Tells you if your schema is up-to-date.</td></tr>
+<tr><td>php bin/console   doctrine:migrations:version             </td><td>Manually add and delete migration versions from the version table.</td></tr>
+<tr><td>php bin/console   doctrine:query:dql                      </td><td>Executes arbitrary DQL directly from the command line</td></tr>
+<tr><td>php bin/console   doctrine:query:sql                      </td><td>Executes arbitrary SQL directly from the command line.</td></tr>
+<tr><td>php bin/console   doctrine:schema:create                  </td><td>Processes the schema and either create it directly on EntityManager Storage Connection or generate the SQL output</td></tr>
+<tr><td>php bin/console   doctrine:schema:drop                    </td><td>Drop the complete database schema of EntityManager Storage Connection or generate the corresponding SQL output</td></tr>
+<tr><td>php bin/console   doctrine:schema:update                  </td><td>Executes (or dumps) the SQL needed to update the database schema to match the current mapping metadata</td></tr>
+<tr><td>php bin/console   doctrine:schema:validate                </td><td>Validate the mapping files</td></tr>
+<tr><td>php bin/console  importmap</td></tr>
+<tr><td>php bin/console   importmap:audit                         </td><td>Check for security vulnerability advisories for dependencies</td></tr>
+<tr><td>php bin/console   importmap:install                       </td><td>Download all assets that should be downloaded</td></tr>
+<tr><td>php bin/console   importmap:outdated                      </td><td>List outdated JavaScript packages and their latest versions</td></tr>
+<tr><td>php bin/console   importmap:remove                        </td><td>Remove JavaScript packages</td></tr>
+<tr><td>php bin/console   importmap:require                       </td><td>Require JavaScript packages</td></tr>
+<tr><td>php bin/console   importmap:update                        </td><td>Update JavaScript packages to their latest versions</td></tr>
+<tr><td>php bin/console  lint</td></tr>
+<tr><td>php bin/console   lint:container                          </td><td>Ensure that arguments injected into services match type declarations</td></tr>
+<tr><td>php bin/console   lint:twig                               </td><td>Lint a Twig template and outputs encountered errors</td></tr>
+<tr><td>php bin/console   lint:xliff                              </td><td>Lint an XLIFF file and outputs encountered errors</td></tr>
+<tr><td>php bin/console   lint:yaml                               </td><td>Lint a YAML file and outputs encountered errors</td></tr>
+<tr><td>php bin/console  mailer</td></tr>
+<tr><td>php bin/console   mailer:test                             </td><td>Test Mailer transports by sending an email</td></tr>
+<tr><td>php bin/console  make</td></tr>
+<tr><td>php bin/console   make:auth                               </td><td>Create a Guard authenticator of different flavors</td></tr>
+<tr><td>php bin/console   make:command                            </td><td>Create a new console command class</td></tr>
+<tr><td>php bin/console   make:controller                         </td><td>Create a new controller class</td></tr>
+<tr><td>php bin/console   make:crud                               </td><td>Create CRUD for Doctrine entity class</td></tr>
+<tr><td>php bin/console   make:docker:database                    </td><td>Add a database container to your docker-compose.yaml file</td></tr>
+<tr><td>php bin/console   make:entity                             </td><td>Create or update a Doctrine entity class, and optionally an API Platform resource</td></tr>
+<tr><td>php bin/console   make:fixtures                           </td><td>Create a new class to load Doctrine fixtures</td></tr>
+<tr><td>php bin/console   make:form                               </td><td>Create a new form class</td></tr>
+<tr><td>php bin/console   make:listener                           </td><td>[make:subscriber] Creates a new event subscriber class or a new event listener class</td></tr>
+<tr><td>php bin/console   make:message                            </td><td>Create a new message and handler</td></tr>
+<tr><td>php bin/console   make:messenger-middleware               </td><td>Create a new messenger middleware</td></tr>
+<tr><td>php bin/console   make:migration                          </td><td>Create a new migration based on database changes</td></tr>
+<tr><td>php bin/console   make:registration-form                  </td><td>Create a new registration form system</td></tr>
+<tr><td>php bin/console   make:reset-password                     </td><td>Create controller, entity, and repositories for use with symfonycasts/reset-password-bundle</td></tr>
+<tr><td>php bin/console   make:security:form-login                </td><td>Generate the code needed for the form_login authenticator</td></tr>
+<tr><td>php bin/console   make:serializer:encoder                 </td><td>Create a new serializer encoder class</td></tr>
+<tr><td>php bin/console   make:serializer:normalizer              </td><td>Create a new serializer normalizer class</td></tr>
+<tr><td>php bin/console   make:stimulus-controller                </td><td>Create a new Stimulus controller</td></tr>
+<tr><td>php bin/console   make:test                               </td><td>[make:unit-test|make:functional-test] Create a new test class</td></tr>
+<tr><td>php bin/console   make:twig-component                     </td><td>Create a twig (or live) component</td></tr>
+<tr><td>php bin/console   make:twig-extension                     </td><td>Create a new Twig extension with its runtime class</td></tr>
+<tr><td>php bin/console   make:user                               </td><td>Create a new security user class</td></tr>
+<tr><td>php bin/console   make:validator                          </td><td>Create a new validator and constraint class</td></tr>
+<tr><td>php bin/console   make:voter                              </td><td>Create a new security voter class</td></tr>
+<tr><td>php bin/console  messenger</td></tr>
+<tr><td>php bin/console   messenger:consume                       </td><td>Consume messages</td></tr>
+<tr><td>php bin/console   messenger:failed:remove                 </td><td>Remove given messages from the failure transport</td></tr>
+<tr><td>php bin/console   messenger:failed:retry                  </td><td>Retry one or more messages from the failure transport</td></tr>
+<tr><td>php bin/console   messenger:failed:show                   </td><td>Show one or more messages from the failure transport</td></tr>
+<tr><td>php bin/console   messenger:setup-transports              </td><td>Prepare the required infrastructure for the transport</td></tr>
+<tr><td>php bin/console   messenger:stats                         </td><td>Show the message count for one or more transports</td></tr>
+<tr><td>php bin/console   messenger:stop-workers                  </td><td>Stop workers after their current message</td></tr>
+<tr><td>php bin/console  router</td></tr>
+<tr><td>php bin/console   router:match                            </td><td>Help debug routes by simulating a path info match</td></tr>
+<tr><td>php bin/console  secrets</td></tr>
+<tr><td>php bin/console   secrets:decrypt-to-local                </td><td>Decrypt all secrets and stores them in the local vault</td></tr>
+<tr><td>php bin/console   secrets:encrypt-from-local              </td><td>Encrypt all local secrets to the vault</td></tr>
+<tr><td>php bin/console   secrets:generate-keys                   </td><td>Generate new encryption keys</td></tr>
+<tr><td>php bin/console   secrets:list                            </td><td>List all secrets</td></tr>
+<tr><td>php bin/console   secrets:remove                          </td><td>Remove a secret from the vault</td></tr>
+<tr><td>php bin/console   secrets:set                             </td><td>Set a secret in the vault</td></tr>
+<tr><td>php bin/console  security</td></tr>
+<tr><td>php bin/console   security:hash-password                  </td><td>Hash a user password</td></tr>
+<tr><td>php bin/console  server</td></tr>
+<tr><td>php bin/console   server:dump                             </td><td>Start a dump server that collects and displays dumps in a single place</td></tr>
+<tr><td>php bin/console   server:log                              </td><td>Start a log server that displays logs in real time</td></tr>
+<tr><td>php bin/console  translation</td></tr>
+<tr><td>php bin/console   translation:extract                     </td><td>Extract missing translations keys from code to translation files</td></tr>
+<tr><td>php bin/console   translation:pull                        </td><td>Pull translations from a given provider.</td></tr>
+<tr><td>php bin/console   translation:push                        </td><td>Push translations to a given provider.</td></tr>
+</table>
+<p>end of file </p>
+    
+  
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" ></script>
+  </body>
+</html>
