@@ -9,6 +9,8 @@
   <body onload="myfunc3()">
   <div class="container">
 <h1>Contacts</h1>
+<button type="button" class="btn btn-primary" onclick="myfunc3()">A-Z</button>
+
 <div id="myDiv"></div>
 </div>
 
@@ -46,8 +48,9 @@ function myfunc3(){
 function ligne(el){
    html = "<tr>";
    html+= "<td>"+el.prenom+"</td>";    
-   html+= '<td><button type="button" class="btn btn-primary" onclick="myfunc2(\''+el.nom+'\')">'+el.nom+'</button></td>';     
-   html+= "<td>"+el.dat+"</td>"; 
+   html+= '<td><button type="button" class="btn btn-primary" onclick="myfunc2(\''+el.nom+'\')">'+el.nom+'</button></td>';  
+   html+= '<td><button type="button" class="btn btn-primary" >'+el.fix+'</button></td>';   
+   html+= '<td><button type="button" class="btn btn-primary" onclick="myfunc2(\''+el.mob+'\')">'+el.mob+'</button></td>';       
    html += "</tr>";  
    return html;
 }
