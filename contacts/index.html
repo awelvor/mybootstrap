@@ -48,11 +48,11 @@ function myfunc3(){
 function ligne(el){
    html = "<tr>";
    html+= "<td>"+el.prenom+"</td>";    
-   html+= '<td><button type="button" class="btn btn-primary btn-sm col-6" onclick="myfunc2(\''+el.nom+'\')">'+el.nom+'</button></td>';  
-  (el.fix != undefined)? html += '<td><button type="button btn-sm" class="btn btn-primary" >'+el.fix+'</button></td>': html += '<td></td>'; 
-  (el.mob != undefined)? html += '<td><button type="button btn-sm" class="btn btn-primary" >'+el.mob+'</button></td>': html += '<td></td>';   
-  (el.cp  != undefined)? html += '<td><button type="button btn-sm" class="btn btn-primary" >'+el.cp+'</button></td>': html += '<td></td>'; 
-  (el.com != undefined)? html += '<td><button type="button btn-sm" class="btn btn-primary" >'+el.com+'</button></td>': html += '<td></td>';     
+   html+= '<td><button type="button" class="btn btn-outline-primary btn-sm col-6" onclick="myfunc2(\''+el.nom+'\')">'+el.nom+'</button></td>';  
+  (el.fix != undefined)? html += '<td><button type="button" class="btn btn-outline-primary btn-sm">'+el.fix+'</button></td>': html += '<td></td>'; 
+  (el.mob != undefined)? html += '<td><button type="button" class="btn btn-outline-primary btn-sm">'+el.mob+'</button></td>': html += '<td></td>'; 
+  (el.cp  != undefined)? html += '<td><button type="button" class="btn btn-outline-primary btn-sm">'+el.cp +'</button></td>': html += '<td></td>'; 
+  (el.com != undefined)? html += '<td><button type="button" class="btn btn-outline-primary btn-sm">'+el.com+'</button></td>': html += '<td></td>';     
    html += "</tr>";  
    return html;
 }
