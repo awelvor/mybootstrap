@@ -44,6 +44,13 @@ function myfunc3(){
 	html += "</table>";
 	document.getElementById("myDiv").innerHTML = html; 
 }
+
+function myfunc4(com){
+    html='<table class="table table-sm table-hover">';
+   tab.forEach(function(el){ if(el.com==com) {html += ligne(el)};});
+  html += "</table>";
+   document.getElementById("myDiv").innerHTML = html; 
+   }
    
 function ligne(el){
    html = "<tr>";
