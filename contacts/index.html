@@ -52,7 +52,7 @@ function ligne(el){
   (el.fix != undefined)? html += '<td><button type="button" class="btn btn-outline-primary btn-sm">'+el.fix+'</button></td>': html += '<td></td>'; 
   (el.mob != undefined)? html += '<td><button type="button" class="btn btn-outline-primary btn-sm">'+el.mob+'</button></td>': html += '<td></td>'; 
   (el.cp  != undefined)? html += '<td><button type="button" class="btn btn-outline-primary btn-sm">'+el.cp +'</button></td>': html += '<td></td>'; 
-  (el.com != undefined)? html += '<td><button type="button" class="btn btn-outline-primary btn-sm">'+el.com+'</button></td>': html += '<td></td>';     
+  (el.com != undefined)? html += '<td><button type="button" class="btn btn-outline-primary btn-sm" onclick="myfunc4(\''+el.com+'\')">'+el.com+'</button></td>': html += '<td></td>';     
    html += "</tr>";  
    return html;
 }
