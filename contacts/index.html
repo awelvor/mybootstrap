@@ -51,6 +51,13 @@ function myfunc4(com){
   html += "</table>";
    document.getElementById("myDiv").innerHTML = html; 
    }
+
+function myfunc5(cp){
+    html='<table class="table table-sm table-hover">';
+   tab.forEach(function(el){ if(el.cp==cp) {html += ligne(el)};});
+  html += "</table>";
+   document.getElementById("myDiv").innerHTML = html; 
+   }
    
 function ligne(el){
    html = "<tr>";
@@ -58,7 +65,7 @@ function ligne(el){
    html+= '<td><button type="button" class="btn btn-outline-primary btn-sm col-6" onclick="myfunc2(\''+el.nom+'\')">'+el.nom+'</button></td>';  
   (el.fix != undefined)? html += '<td><button type="button" class="btn btn-outline-primary btn-sm">'+el.fix+'</button></td>': html += '<td></td>'; 
   (el.mob != undefined)? html += '<td><button type="button" class="btn btn-outline-primary btn-sm">'+el.mob+'</button></td>': html += '<td></td>'; 
-  (el.cp  != undefined)? html += '<td><button type="button" class="btn btn-outline-primary btn-sm">'+el.cp +'</button></td>': html += '<td></td>'; 
+  (el.cp  != undefined)? html += '<td><button type="button" class="btn btn-outline-primary btn-sm" onclick="myfunc5(\''+el.cp+'\')">'+el.cp +'</button></td>': html += '<td></td>'; 
   (el.com != undefined)? html += '<td><button type="button" class="btn btn-outline-primary btn-sm" onclick="myfunc4(\''+el.com+'\')">'+el.com+'</button></td>': html += '<td></td>';     
    html += "</tr>";  
    return html;
