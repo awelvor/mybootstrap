@@ -54,32 +54,43 @@ function myfunc4(com){
 
 function myfunc5(cp){
     html='<table class="table table-sm table-hover">';
-   tab.forEach(function(el){ if(el.cp==cp) {html += ligne(el)};});
+   tab2=[];
+   tab.forEach(function(el){ if(el.cp != undefined) {tab2.push(el);}});
+   tab2.sort(function(el1, el2){ return (el1.cp>el2.cp)? 1:(el1.cp<el2.cp)?-1:0; } ) ;
+   tab2.forEach(function(el){  html += ligne(el) } ) ;
+   
+   
   html += "</table>";
    document.getElementById("myDiv").innerHTML = html; 
    }
 function myfunc6(){
     html='<table class="table table-sm table-hover">';
-   tab.forEach(function(el){ if(el.fix != undefined) {html += ligne(el)};});
+    tab2=[];
+   tab.forEach(function(el){ if(el.fix != undefined) {tab2.push(el);}});
+   tab2.sort(function(el1, el2){ return (el1.fix>el2.fix)? 1:(el1.fix<el2.fix)?-1:0; } ) ;
+   tab2.forEach(function(el){  html += ligne(el) } ) ;
   html += "</table>";
    document.getElementById("myDiv").innerHTML = html; 
    }
 
  function myfunc7(){
     html='<table class="table table-sm table-hover">';
-   tab.forEach(function(el){ if(el.mob != undefined) {html += ligne(el)};});
+   tab2=[];
+   tab.forEach(function(el){ if(el.mob != undefined) {tab2.push(el);}});
+   tab2.sort(function(el1, el2){ return (el1.mob>el2.mob)? 1:(el1.mob<el2.mob)?-1:0; } ) ;
+   tab2.forEach(function(el){  html += ligne(el) } ) ;
   html += "</table>";
    document.getElementById("myDiv").innerHTML = html; 
    }
    
 function ligne(el){
    html = "<tr>";
-   html+= "<td>"+el.prenom+"</td>";    
-   html+= '<td><button type="button" class="btn btn-outline-primary btn-sm col-6" onclick="myfunc2(\''+el.nom+'\')">'+el.nom+'</button></td>';  
+   html+= '<td class="col-2"><button type="button" class="btn btn-outline-primary btn-sm col-12">'+el.prenom+'</button></td>';    
+   html+= '<td class="col-2"><button type="button" class="btn btn-outline-primary btn-sm col-12" onclick="myfunc2(\''+el.nom+'\')">'+el.nom+'</button></td>';  
   (el.fix != undefined)? html += '<td><button type="button" class="btn btn-outline-primary btn-sm" onclick="myfunc6()">'+el.fix+'</button></td>': html += '<td></td>'; 
   (el.mob != undefined)? html += '<td><button type="button" class="btn btn-outline-primary btn-sm" onclick="myfunc7()">'+el.mob+'</button></td>': html += '<td></td>'; 
   (el.cp  != undefined)? html += '<td><button type="button" class="btn btn-outline-primary btn-sm" onclick="myfunc5(\''+el.cp+'\')">'+el.cp +'</button></td>': html += '<td></td>'; 
-  (el.com != undefined)? html += '<td><button type="button" class="btn btn-outline-primary btn-sm" onclick="myfunc4(\''+el.com+'\')">'+el.com+'</button></td>': html += '<td></td>';     
+  if (el.com != undefined){html += '<td class="col-2"><button type="button" class="btn btn-outline-primary btn-sm col-12" onclick="myfunc4(\''+el.com+'\')">'+el.com+'</button></td>';}
    html += "</tr>";  
    return html;
 }
