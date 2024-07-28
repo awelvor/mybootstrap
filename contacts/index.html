@@ -91,7 +91,8 @@ function ligne(el){
   (el.mob != undefined)? html += '<td><button type="button" class="btn btn-outline-primary btn-sm" onclick="myfunc7()">'+el.mob+'</button></td>': html += '<td></td>'; 
   (el.cp  != undefined)? html += '<td><button type="button" class="btn btn-outline-primary btn-sm" onclick="myfunc5(\''+el.cp+'\')">'+el.cp +'</button></td>': html += '<td></td>'; 
   if (el.com != undefined){html += '<td class="col-2"><button type="button" class="btn btn-outline-primary btn-sm col-12" onclick="myfunc4(\''+el.com+'\')">'+el.com+'</button></td>';}
-   html += "</tr>";  
+  html += '<td><img src="gm.png"></td>';
+  html += "</tr>";  
    return html;
 }
    
