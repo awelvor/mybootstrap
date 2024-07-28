@@ -25,7 +25,7 @@ tab=[
     {prenom:"Faustine", nom:"REGENT", dn:"",  cp:"78120",com:"RAMBOUILLET",  dat:"2024-06-22"} , 
     {prenom:"Marie-Gabrielle", nom:"REGENT", dn:"", fix:"02.54.45.19.36", mob:"07.71.01.37.14",cp:"41700", com:"CHEVERNY", dat:"2024-06-22"} , 
     {prenom:"Etienne", nom:"REGENT", dn:"", cp:"41700", com:"CHEVERNY",  dat:"2024-06-22"} , 
-    {prenom:"Baudouin", nom:"REGENT", dn:"", cp:"41700", com:"CHEVERNY",  dat:"2024-06-22"} , 
+    {prenom:"Baudouin", nom:"REGENT", dn:"2007-02-23"", fix:"02.54.45.19.36",mob:"06.80.38.03.53",cp:"41700", com:"CHEVERNY", adr:"https://www.google.com/maps/place/3+Chem.+de+la+Soulardi%C3%A8re,+41700+Cheverny/", dat:"2024-06-22"} , 
     {prenom:"Louis-Marie", nom:"REGENT", dn:"", cp:"41700", com:"CHEVERNY",  dat:"2024-06-22"} , 
     {prenom:"François-Guillaume", nom:"REGENT", dn:"", cp:"41700", com:"CHEVERNY",  dat:"2024-06-22"} , 
     {prenom:"Xavier", nom:"REGENT", dn:"", cp:"86100", com:"CHATELLERAULT",  dat:"2024-06-22"} , 
