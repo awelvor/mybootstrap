@@ -1,0 +1,16 @@
+const jo = [
+"assets/images/paris-games-artistic-gymnastics-6753651837110525-law.gif",
+"assets/images/paris-games-artistic-swimming-day-2-6753651837110563-law.gif",
+"assets/images/paris-games-breaking-6753651837110566-law.gif",
+"assets/images/paris-games-climbing-6753651837110564-law.gif",
+"assets/images/paris-games-climbing-day-2-6753651837110565-law.gif",
+"assets/images/paris-games-conclude-6753651837110568-law.gif",
+"assets/images/paris-games-football-6753651837110524-law.gif",
+"assets/images/paris-games-july-most-searched-playground-6753651837110527-law.gif",
+"assets/images/paris-games-rings-6753651837110531-law.gif",
+"assets/images/paris-games-sailing-6753651837110529.4-law.gif",
+"assets/images/paris-games-sailing-day-2-6753651837110530-law.gif",
+"assets/images/paris-games-skateboarding-6753651837110523-law.gif",
+"assets/images/paris-games-surfing-6753651837110528.3-law.gif",
+"assets/images/paris-games.png",
+];
