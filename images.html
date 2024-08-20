@@ -1,6 +1,12 @@
 ---
-layout: image
-title: Images
+title: images2
 ---
-
-<p>page: images.html</p>
+<script src="assets/js/gif2.js"></script>
+   
+<script>
+html = "";
+tab.forEach(function(el){
+html += "<p>"+el.title+" <img src='"+el.url + "' style='height: 100px;'></p>";
+});
+document.write(html);
+</script>
