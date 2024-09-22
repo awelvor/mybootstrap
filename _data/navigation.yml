@@ -18,8 +18,10 @@
   link: /bootstrap/contacts
 - name: Sudoku
   link: /bootstrap/sudoku
-- images: JOParis2024
+- name: JOParis2024
   link: /bootstrap/images.html
+- name: Figure
+  link: /bootstrap/figure.html
   
   
   
