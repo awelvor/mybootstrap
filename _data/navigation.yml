@@ -1,29 +1,26 @@
 - name: Home
-  link: /bootstrap/
+  link: /mybootstrap/
 - name: About
-  link: /bootstrap/about.html
+  link: /mybootstrap/about.html
 - name: Blog
-  link: /bootstrap/post.html
+  link: /mybootstrap/post.html
 - name: Staff
-  link: /bootstrap/staff.html
+  link: /mybootstrap/staff.html
 - name: Avis
-  link: /bootstrap/avis.html
+  link: /mybootstrap/avis.html
 - name: Symfony
-  link: /bootstrap/symfony.html
+  link: /mybootstrap/symfony.html
 - name: Ubuntu
-  link: /bootstrap/ubuntu.html
+  link: /mybootstrap/ubuntu.html
 - name: Pivoines
-  link: /bootstrap/images.html
+  link: /mybootstrap/images.html
 - name: Contacts
   link: /mybootstrap/contacts
 - name: Sudoku
-  link: /bootstrap/sudoku
+  link: /mybootstrap/sudoku
 - name: JOParis2024
-  link: /bootstrap/images.html
+  link: /mybootstrap/images.html
 - name: Figure
-  link: /bootstrap/figure.html
+  link: /mybootstrap/figure.html
 - name: Enoria
-  link: /bootstrap/enoria.html
-  
-  
-  
+  link: /mybootstrap/enoria.html
